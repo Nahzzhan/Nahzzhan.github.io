@@ -24,7 +24,7 @@
         color: #42210B;
         font-size: 60px;
         width: 100%;
-       
+
         top: 0;
         border-top: 4px solid #42210B;
         border-bottom: 4px solid #42210B;
@@ -50,6 +50,11 @@
         padding-bottom: 10px;
     }
 
+    .info_qiu:hover {
+        background-color: rgba(59, 30, 10);
+        color: #d6d2cf;
+    }
+
     .info_xinxi {
         flex: auto;
         width: 33.33%;
@@ -59,6 +64,11 @@
         padding-bottom: 10px;
     }
 
+    .info_xinxi:hover {
+        background-color: rgba(56, 56, 56);
+        color: #ffffff;
+    }
+
     .info_lianxi {
         flex: auto;
         width: 33.33%;
@@ -66,6 +76,11 @@
         color: #42210B;
         text-align: center;
         padding-bottom: 10px;
+    }
+
+    .info_lianxi:hover {
+        background-color: rgba(116, 116, 116);
+        color: #ffffff;
     }
 
     .the_img {
@@ -214,19 +229,21 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        
+
     }
 
-    .biao:hover{
+    .biao:hover {
         width: 65px;
         height: 65px;
         box-shadow: 5px 5px 10px #888888;
     }
-    .xiao:hover{
+
+    .xiao:hover {
         width: 65px;
         height: 65px;
         box-shadow: 5px 5px 10px #888888;
     }
+
     .xiao {
         width: 60px;
         height: 60px;
@@ -239,34 +256,37 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        
+
     }
 
-    a{
+    a {
         text-decoration: none;
         color: aliceblue;
     }
 
-    @media (max-width:600px){
-        .info{
+    @media (max-width:600px) {
+        .info {
             flex-direction: column;
             align-items: center;
         }
 
-        .main{
+        .main {
             width: 600px;
         }
 
-        .body{
+        .body {
             flex-direction: column;
         }
-        .left{
+
+        .left {
             width: 80%;
         }
-        .right{
+
+        .right {
             width: 80%;
         }
-        .footer{
+
+        .footer {
             flex-direction: column;
             align-items: center;
         }
