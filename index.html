@@ -5,100 +5,329 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .login{
-            background-color: #7692ec;
-            text-align: center;
-            width: 50px;
-            height:25px;
-            color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 5px 5px 10px #888888
-        }
-       
-        a{
-            text-align: center;
-            text-decoration: none;
-            color: #eff2f5;
-        }
-        body{
-            margin:0;
-            padding:0;
-        }
-        h1{
-            margin:0;
-            padding:20px;
-            text-align: center;
-        }
-        .container {
-            width: 800px;
-            margin:0 auto;
-            background-color: #CCCCCC;
-            padding: 20px;
-            box-shadow: 5px 5px 10px #888888;
-        }
-        .theimage{
-            text-align: center;
-        }
-        h2{
-            background-color: #7692ec;
-            line-height:40px;
-            padding-left:10px;
-            color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 5px 5px 10px #888888;
-        }
-        h2:hover{
-            background-color: rgb(150, 168, 219);
-        }
-    </style>
+    <title>简历</title>
 </head>
+<style>
+    .main {
+        width: 900px;
+        background-size: 100% 100%;
+        margin: 0 auto;
+        background-image: url(../image/bg1.webp);
+        padding: 20px;
+        box-shadow: 5px 5px 10px #888888;
+
+    }
+
+    .header {
+        display: flex;
+        justify-content: center;
+        color: #42210B;
+        font-size: 60px;
+        width: 100%;
+        top: 0;
+        border-top: 4px solid #42210B;
+        border-bottom: 4px solid #42210B;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .info {
+        display: flex;
+        margin: 20px;
+        height: 150px;
+        justify-content: center;
+
+
+    }
+
+    .info_qiu {
+        flex: auto;
+        width: 33.33%;
+        background-color: rgba(59, 30, 10, 0.4);
+        color: #42210B;
+        text-align: center;
+    }
+
+    .info_xinxi {
+        flex: auto;
+        width: 33.33%;
+        background-color: rgba(56, 56, 56, 0.4);
+        color: #42210B;
+        text-align: center;
+
+    }
+
+    .info_lianxi {
+        flex: auto;
+        width: 33.33%;
+        background-color: rgba(116, 116, 116, 0.4);
+        color: #42210B;
+        text-align: center;
+    }
+
+    .the_img {
+        text-align: center;
+        padding: 40px;
+        height: auto;
+        border-top: 2px solid #42210B;
+        border-bottom: 4px solid #42210B;
+    }
+
+    .body {
+        display: flex;
+        justify-content: space-between;
+        height: auto;
+        width: 100%;
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        gap: 15px;
+        width: 58%;
+        height: 640px;
+        padding-right: 10px;
+
+        margin-top: 20px;
+        border-right: 2px solid #42210B;
+
+    }
+
+    .top {
+        display: flex;
+        flex: auto;
+        height: 50%;
+        justify-content: space-between;
+
+
+    }
+
+    .top_img {
+        width: 50%;
+        font-weight: bold;
+        text-align: center;
+        font-size: 24pt;
+        color: #42210B;
+    }
+
+    .top_zi {
+        flex: auto;
+        font-size: 15pt;
+        color: #42210B;
+        padding-top: 120px;
+        padding-left: 24px;
+    }
+
+    .bottom {
+        display: flex;
+        flex: auto;
+        height: 50%;
+
+        border-top: 2px solid #42210B;
+    }
+
+    .bottom_img {
+        display: flex;
+        align-items: center;
+        width: 50%;
+
+    }
+
+    .bottom_zi {
+        width: 50%;
+
+        display: flex;
+        flex-direction: column;
+        align-content: space-around;
+
+        color: #42210B;
+        padding-right: 18px;
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        width: 42%;
+        height: 640px;
+        padding-left: 10px;
+        margin-top: 20px;
+
+    }
+
+    .right_img {
+        flex: auto;
+        height: 35%;
+    }
+
+    .right_zi {
+        flex: auto;
+        height: 22%;
+        text-align: center;
+        font-weight: bold;
+        text-align: center;
+        font-size: 24pt;
+        color: #42210B;
+
+    }
+
+    .right_jineng {
+        flex: auto;
+        height: 45%;
+        padding-left: 10px;
+        font-size: 15pt;
+        color: #42210B;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        height: 300px;
+        width: 100%;
+        background-color: rgb(59, 30, 10, 0.3);
+        margin-top: 20px;
+    }
+
+    .card {
+        height: 100%;
+        width: 200px;
+        border-top: 10px solid #42210B;
+        padding: 10px;
+        color: #42210B;
+
+    }
+
+    .biao {
+        width: 60px;
+        height: 60px;
+        background-color: #313131;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        border-radius: 50%;
+        color: aliceblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 5px 5px 10px #888888;
+    }
+
+    .xiao {
+        width: 60px;
+        height: 60px;
+        background-color: #9c6363;
+        position: fixed;
+        right: 20px;
+        bottom: 100px;
+        border-radius: 50%;
+        color: aliceblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 5px 5px 10px #888888;
+    }
+
+    a{
+        text-decoration: none;
+        color: aliceblue;
+    }
+</style>
 
 <body>
-    <div class="container">
-        <h1>Nahz</h1>
-        <div class="theimage"><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Ftp1.tupiankucdn.com%2Fgif%2Fs%2F2018%2Fefcb6383fef24fed9ac723850aa960e0.jpg&refer=http%3A%2F%2Ftp1.tupiankucdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1648725295&t=9492bd4999381ae9be33fc1f70bf651e"
-            width="200px">
+    <div class="main">
+        <div class="header">
+            Nahz
         </div>
-        <div class=login><h4><a href="a.html">登录</a></h4></div>
-        <hr>
-        <ul>
-            <li><b>性别：</b>男</li>
-            <li><b>段位：</b>10年王者</li>
-            <li><b>含金量:</b>巅峰赛1800</li>
-            <li><b>身份：</b>国一李信</li>
-        </ul>
+        <div class="info">
+            <div class="info_qiu">
+                <h2 style="text-align: center;">求职意向</h2>
+                给口饭吃
+            </div>
+            <div class="info_xinxi">
+                <h2>基本信息</h2>
+                年龄：20 <br> 学历:本升专 <br>专业：战斗贼
+            </div>
+            <div class="info_lianxi">
+                <h2>联系方式</h2>
+                <p>2287247327@qq.com</p>
+            </div>
+        </div>
+        <div class="the_img">
+            <div class="theimage"><img style="border: 4px solid #42210B;"
+                    src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Ftp1.tupiankucdn.com%2Fgif%2Fs%2F2018%2Fefcb6383fef24fed9ac723850aa960e0.jpg&refer=http%3A%2F%2Ftp1.tupiankucdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1648725295&t=9492bd4999381ae9be33fc1f70bf651e"
+                    width="400px">
+            </div>
+        </div>
 
-        <hr >
-        <h2>背景</h2>
-        <table cellspacing=10>
-            <tr>
-                <th>时间</th>
-                <th>地点</th>
-                <th>职务</th>
-            </tr>
-            <tr>
-                <td>1900-2000</td>
-                <td>果宝特工队</td>
-                <td>队长</td>
-            </tr>
-            <tr>
-                <td>2001-2005</td>
-                <td>恶霸三人组</td>
-                <td>蜘蛛侦探</td>
-            </tr>
-            <tr>
-                <td>2005-2010</td>
-                <td>苇名城</td>
-                <td>城主</td>
-            </tr>
-        </table>
+        <div class="body">
+            <div class="left">
+                <div class="top">
+                    <div class="top_img">
+                        合理的自我介绍
+                        <br><br>
+                        <img style="border: 2px solid #42210B;" src="image\zzzt.jpeg" width="255px" height="200px">
+                    </div>
+                    <div class="top_zi">
+                        我很喜欢英雄联盟游戏中狄仁杰说的一句话：你的牌打的也忒好了！
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="bottom_img">
+                        <img style="border: 2px solid #42210B;" src="image\jiang.jpeg" width="255px" height="165px">
+                    </div>
+                    <div class="bottom_zi">
+                        <p style="font-weight: bold;font-size:18pt; margin:15px; margin-bottom:0;text-align: center;">
+                            证书奖项</p>
+                        <ul>
+                            <li>steam汽车大奖赛柯基队</li><br>
+                            <li>微观经济学最速通关传说</li><br>
+                            <li>墨西哥车神</li><br>
+                            <li>灵异学教授</li><br>
+                            <li>大学英语5级</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="right_img">
+                    <img src="image\buff.jpeg" width="378px" height="202px">
+                </div>
+                <div class="right_zi">
+                    最求卓越精益求精<br>
+                    掌握多项生存技能
+                </div>
+                <div class="right_jineng">
+                    熟练掌握吃饭，睡觉。精通睡眠高级特性，熟悉并发级写作业技术。
+                    熟练使用课上睡眠，逃离教室等框架。有速通微经，宏经等项目经验。
+                    掌握深度学习小学课本技术。
+                    了解抢课，水学分等基础操作。
+                </div>
+            </div>
 
-        <hr>
-        <h2>自我介绍</h2>
-        <h3>我很喜欢英雄联盟里狄仁杰说的一句话：你的牌打的也忒好了！</h3>
-    </div>
+
+        </div>
+        <div class="footer">
+            <div class="card">
+
+                <p style="font-weight: bold;font-size:16pt; text-align: center;margin: 0;">
+                    蜘蛛侦探</p>
+                <p>曾与蝎子莱莱，蟑螂恶霸是恶霸三人组。参与捣乱铁甲小宝卡布达和他的朋友们寻找和平星。有着毁灭地球的重任(??~2010)</p>
+            </div>
+            <div class="card">
+                <p style="font-weight: bold;font-size:16pt; text-align: center;margin: 0;">
+                    十年老盗贼</p>
+                <p>使用盗贼职业在怀旧服中参与攻略祖格，黑石，熔火之心等团队副本。为团队贡献跑尸，灭团等宝贵经验。在团队中但仍可有可无的位置。（2019~2021）</p>
+            </div>
+            <div class="card">
+                <p style="font-weight: bold;font-size:16pt; text-align: center;margin: 0;">
+                    艾尔登之王</p>
+                <p>艾尔登法环破碎后，作为褪色者踏入狭间之地。从宁姆格福到盖利德，拳打噩兆王，脚踢拉塔恩。最终在王城被锤到头破血流。(2022至今)</p>
+            </div>
+        </div>
+
+        <div class="biao"><a href="a.html">表</a></div>
+        <div class="xiao"><a href="suibe.html">校</a></div>
 </body>
 
 </html>
