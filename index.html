@@ -15,7 +15,7 @@
         background-image: url(../image/bg1.webp);
         padding: 20px;
         box-shadow: 5px 5px 10px #888888;
-
+        height: auto;
     }
 
     .header {
@@ -24,6 +24,7 @@
         color: #42210B;
         font-size: 60px;
         width: 100%;
+       
         top: 0;
         border-top: 4px solid #42210B;
         border-bottom: 4px solid #42210B;
@@ -34,7 +35,7 @@
     .info {
         display: flex;
         margin: 20px;
-        height: 150px;
+        height: auto;
         justify-content: center;
 
 
@@ -46,6 +47,7 @@
         background-color: rgba(59, 30, 10, 0.4);
         color: #42210B;
         text-align: center;
+        padding-bottom: 10px;
     }
 
     .info_xinxi {
@@ -54,7 +56,7 @@
         background-color: rgba(56, 56, 56, 0.4);
         color: #42210B;
         text-align: center;
-
+        padding-bottom: 10px;
     }
 
     .info_lianxi {
@@ -63,6 +65,7 @@
         background-color: rgba(116, 116, 116, 0.4);
         color: #42210B;
         text-align: center;
+        padding-bottom: 10px;
     }
 
     .the_img {
@@ -184,7 +187,7 @@
     .footer {
         display: flex;
         justify-content: space-between;
-        height: 300px;
+        height: auto;
         width: 100%;
         background-color: rgb(59, 30, 10, 0.3);
         margin-top: 20px;
@@ -243,6 +246,31 @@
         text-decoration: none;
         color: aliceblue;
     }
+
+    @media (max-width:600px){
+        .info{
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main{
+            width: 600px;
+        }
+
+        .body{
+            flex-direction: column;
+        }
+        .left{
+            width: 80%;
+        }
+        .right{
+            width: 80%;
+        }
+        .footer{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
 </style>
 
 <body>
@@ -256,7 +284,7 @@
                 给口饭吃
             </div>
             <div class="info_xinxi">
-                <h2>基本信息</h2>
+                <h2 style="margin-bottom: 4px;">基本信息</h2>
                 年龄：20 <br> 学历:本升专 <br>专业：战斗贼
             </div>
             <div class="info_lianxi">
